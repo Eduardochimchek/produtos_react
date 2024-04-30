@@ -1,5 +1,5 @@
 import React from 'react';
-import './TabelaProdutos.css'
+import './TabelaProdutos.css';
 
 function TabelaProdutos({ produtos, editarProduto, excluirProduto }) {
     return (
@@ -22,7 +22,7 @@ function TabelaProdutos({ produtos, editarProduto, excluirProduto }) {
                             <td>R$ {prod.price}</td>
                             <td>{prod.stock}</td>
                             <td className="actions">
-                                <button onClick={() => editarProduto(prod.id)}>Editar</button>
+                                <button onClick={() => editarProduto(prod)}>Editar</button>
                                 <button onClick={() => excluirProduto(prod.id)}>Excluir</button>
                             </td>
                         </tr>

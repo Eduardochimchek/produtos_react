@@ -13,8 +13,10 @@ function App() {
         setProdutos([...produtos, novoProduto]);
     };
 
-    const editarProduto = (id, produtoAtualizado) => {
-        const produtosAtualizados = produtos.map((prod) => (prod.id === id ? produtoAtualizado : prod));
+    const editarProduto = (produtoAtualizado) => {
+        const produtosAtualizados = produtos.map((prod) =>
+            prod.id === produtoAtualizado.id ? produtoAtualizado : prod
+        );
         setProdutos(produtosAtualizados);
         setProdutoEmEdicao(null); 
     };
@@ -30,7 +32,7 @@ function App() {
             {produtos.length > 0 ? (
                 <TabelaProdutos
                     produtos={produtos}
-                    editarProduto={(produto) => setProdutoEmEdicao(produto)} 
+                    editarProduto={setProdutoEmEdicao} 
                     excluirProduto={excluirProduto}
                 />
             ) : (
