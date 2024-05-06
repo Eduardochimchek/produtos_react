@@ -7,7 +7,7 @@ function TabelaProdutos({ produtos, editarProduto, excluirProduto }) {
             <table>
                 <thead>
                     <tr>
-                        <th>ID</th>
+                        <th>Código do Produto</th>
                         <th>Nome</th>
                         <th>Preço</th>
                         <th>Estoque (kg)</th>
